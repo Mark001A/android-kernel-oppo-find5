@@ -310,7 +310,14 @@ void meminfo_test_saved(void)
 }
 
 #ifdef CONFIG_VT
+#ifdef CONFIG_OPPO_DEBUG_ASSERT
 extern int oppo_con_write(const unsigned char *buf, int count);
+#else
+int oppo_con_write(const unsigned char *buf, int count)
+{
+	return 0;
+}
+#endif
 extern void console_activate(void);
 #else
 int oppo_con_write(const unsigned char *buf, int count)
