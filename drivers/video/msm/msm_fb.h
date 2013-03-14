@@ -239,7 +239,7 @@ int msm_fb_check_frame_rate(struct msm_fb_data_type *mfd,
 #define	INIT_IMAGE_RF "rf.rle"
 #define	INIT_IMAGE_FASTBOOT "fastboot.rle"
 #define	INIT_IMAGE_AT "at.rle"
-int load_565rle_image(char *filename, bool bf_supported);
 #endif
+int load_565rle_image(char *filename, bool bf_supported);
 
 #endif /* MSM_FB_H */

@@ -1362,6 +1362,7 @@ static int msm_fb_register(struct msm_fb_data_type *mfd)
 	int remainder, remainder_mode2;
 #ifdef CONFIG_VENDOR_EDIT
 	int ftmmode;
+	ftmmode = 0;
 #endif
 
 	/*
