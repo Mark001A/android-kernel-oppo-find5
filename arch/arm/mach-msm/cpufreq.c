@@ -318,7 +318,7 @@ static int __cpuinit msm_cpufreq_init(struct cpufreq_policy *policy)
 #ifdef CONFIG_CPU_FREQ_GOV_INTELLIDEMAND
 extern bool lmf_screen_state;
 #endif
-
+/*
 static void msm_cpu_early_suspend(struct early_suspend *h)
 {
 
@@ -356,7 +356,7 @@ static struct early_suspend msm_cpu_early_suspend_handler = {
        .level = EARLY_SUSPEND_LEVEL_BLANK_SCREEN,
        .suspend = msm_cpu_early_suspend,
        .resume = msm_cpu_late_resume,
-};
+       };*/
 
 
 static int msm_cpufreq_suspend(void)
