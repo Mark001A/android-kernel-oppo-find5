@@ -46,11 +46,10 @@ enum src_id {
  */
 enum pvs {
 	PVS_SLOW = 0,
-	PVS_NOMINAL,
-	PVS_FAST,
-	PVS_FASTER,
-	PVS_UNKNOWN,
-	NUM_PVS
+	PVS_NOMINAL =1,
+	PVS_FAST =3,
+	PVS_FASTER =4,
+	NUM_PVS = 7
 };
 
 /**
@@ -64,6 +63,7 @@ enum scalables {
 	L2,
 };
 
+#define NUM_SPEED_BINS (16)
 
 /**
  * enum hfpll_vdd_level - IDs of HFPLL voltage levels.
@@ -118,7 +118,6 @@ struct core_speed {
 	unsigned long khz;
 	int src;
 	u32 pri_src_sel;
-	u32 sec_src_sel;
 	u32 pll_l_val;
 };
 
@@ -199,6 +198,7 @@ struct scalable {
 	void __iomem *hfpll_base;
 	const phys_addr_t aux_clk_sel_phys;
 	const u32 aux_clk_sel;
+        const u32 sec_clk_sel;
 	const u32 l2cpmr_iaddr;
 	const struct core_speed *cur_speed;
 	unsigned int l2_vote;
@@ -234,10 +234,10 @@ struct acpuclk_krait_params {
 	struct scalable *scalable;
 	size_t scalable_size;
 	struct hfpll_data *hfpll_data;
-	struct pvs_table *pvs_tables;
+        struct pvs_table (*pvs_tables)[NUM_PVS];
 	struct l2_level *l2_freq_tbl;
 	size_t l2_freq_tbl_size;
-	phys_addr_t qfprom_phys_base;
+	phys_addr_t pte_efuse_phys;
 	struct msm_bus_scale_pdata *bus_scale;
 	unsigned long stby_khz;
 };
