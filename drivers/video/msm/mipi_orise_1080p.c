@@ -655,12 +655,12 @@ static ssize_t kgamma_r_show(struct device *dev, struct device_attribute *attr,
 		kgamma[i] = power_on_set[4].payload[i];
 
 	return sprintf(buf, "%d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d",
-		&kgamma[0], &kgamma[1], &kgamma[2], &kgamma[3],
-		&kgamma[4], &kgamma[5], &kgamma[6], &kgamma[7],
-	        &kgamma[8], &kgamma[9], &kgamma[10], &kgamma[11], &kgamma[12], &kgamma[13],
-		&kgamma[14], &kgamma[15], &kgamma[16], &kgamma[17],
-	        &kgamma[18], &kgamma[19], &kgamma[20], &kgamma[21], &kgamma[22], &kgamma[23],
-		&kgamma[24]);
+		kgamma[0], kgamma[1], kgamma[2], kgamma[3],
+		kgamma[4], kgamma[5], kgamma[6], kgamma[7],
+	        kgamma[8], kgamma[9], kgamma[10], kgamma[11], kgamma[12], kgamma[13],
+		kgamma[14], kgamma[15], kgamma[16], kgamma[17],
+	        kgamma[18], kgamma[19], kgamma[20], kgamma[21], kgamma[22], kgamma[23],
+		kgamma[24]);
 }
 
 static ssize_t kgamma_g_store(struct device *dev, struct device_attribute *attr,
@@ -696,12 +696,12 @@ static ssize_t kgamma_g_show(struct device *dev, struct device_attribute *attr,
 		kgamma[i] = power_on_set[5].payload[i];
 
 	return sprintf(buf, "%d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d",
-		&kgamma[0], &kgamma[1], &kgamma[2], &kgamma[3],
-		&kgamma[4], &kgamma[5], &kgamma[6], &kgamma[7],
-	        &kgamma[8], &kgamma[9], &kgamma[10], &kgamma[11], &kgamma[12], &kgamma[13],
-		&kgamma[14], &kgamma[15], &kgamma[16], &kgamma[17],
-	        &kgamma[18], &kgamma[19], &kgamma[20], &kgamma[21], &kgamma[22], &kgamma[23],
-		&kgamma[24]);
+		kgamma[0], kgamma[1], kgamma[2], kgamma[3],
+		kgamma[4], kgamma[5], kgamma[6], kgamma[7],
+	        kgamma[8], kgamma[9], kgamma[10], kgamma[11], kgamma[12], kgamma[13],
+		kgamma[14], kgamma[15], kgamma[16], kgamma[17],
+	        kgamma[18], kgamma[19], kgamma[20], kgamma[21], kgamma[22], kgamma[23],
+		kgamma[24]);
 }
 
 static ssize_t kgamma_b_store(struct device *dev, struct device_attribute *attr,
@@ -737,12 +737,12 @@ static ssize_t kgamma_b_show(struct device *dev, struct device_attribute *attr,
 		kgamma[i] = power_on_set[6].payload[i];
 
 	return sprintf(buf, "%d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d",
-		&kgamma[0], &kgamma[1], &kgamma[2], &kgamma[3],
-		&kgamma[4], &kgamma[5], &kgamma[6], &kgamma[7],
-	        &kgamma[8], &kgamma[9], &kgamma[10], &kgamma[11], &kgamma[12], &kgamma[13],
-		&kgamma[14], &kgamma[15], &kgamma[16], &kgamma[17],
-	        &kgamma[18], &kgamma[19], &kgamma[20], &kgamma[21], &kgamma[22], &kgamma[23],
-		&kgamma[24]);
+		kgamma[0], kgamma[1], kgamma[2], kgamma[3],
+		kgamma[4], kgamma[5], kgamma[6], kgamma[7],
+	        kgamma[8], kgamma[9], kgamma[10], kgamma[11], kgamma[12], kgamma[13],
+		kgamma[14], kgamma[15], kgamma[16], kgamma[17],
+	        kgamma[18], kgamma[19], kgamma[20], kgamma[21], kgamma[22], kgamma[23],
+		kgamma[24]);
 }
 
 static ssize_t kgamma_ctrl_store(struct device *dev,
